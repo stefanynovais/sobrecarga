@@ -18,7 +18,7 @@ public class Main {
         ConversorTemperatura conversor1 = new ConversorTemperatura();
 
         do {
-            // menu interativo
+            // menu interativo, para que o usuário insira a opção e os valores que deseja.
             System.out.println("Bem-vindo ao sistema de Conversão de Temperaturas!");
             System.out.println();
             System.out.println("Escolha uma operação: ");
@@ -35,7 +35,7 @@ public class Main {
             System.out.println();
 
             opcao = teclado.nextInt();
-
+            //lógica do switch case para escolher as opções.
             switch (opcao) {
                 case 1:
                     System.out.print("Digite a temperatura em Celsius: ");
@@ -66,7 +66,7 @@ public class Main {
                     break;
 
                 case 4:
-                    // converter todas as temperaturas de uma vez, com quantidade de temperaturas
+                    // converter todas as temperaturas de uma vez, com lógica de quantidade de temperaturas que o usuário deseja.
                     System.out.print("Quantas temperaturas deseja coverter?: \n");
                     tamanho = teclado.nextInt();
                     double[] temperaturas = new double[tamanho];
@@ -81,9 +81,9 @@ public class Main {
                     System.out.println("2- Fahrenheit para Celsius");
                     tipoConversão = teclado.nextInt();
 
-                    boolean IsCelsiusToFahrenheit = tipoConversão == 1;
+                    boolean IsCelsiusToFahrenheit = tipoConversão == 1; 
 
-                    double[] resultado = conversor1.converterTodas(temperaturas, IsCelsiusToFahrenheit);
+                    double[] resultado = conversor1.converterTodas(temperaturas, IsCelsiusToFahrenheit); //retornando a função com valor booleano. 
 
                     if (IsCelsiusToFahrenheit) {
 
@@ -96,7 +96,7 @@ public class Main {
                     }
 
                     for (int i = 0; i < resultado.length; i++) {
-                        System.out.println(resultado[i]);
+                        System.out.println(resultado[i]); //exibir resultados das temperaturas convertidas
                         
                     }
                     break;
